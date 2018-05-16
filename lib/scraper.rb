@@ -13,6 +13,14 @@ class Scraper
     get_page.css("#course-grid .posts-holder .post")
   end
 
+  def make_courses
+    get_courses.each do |course|
+      course_c = Course.new
+      course_c.title =
+    end
+
+  end
+
   def print_courses
     self.make_courses
     Course.all.each do |course|
