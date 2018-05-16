@@ -18,7 +18,7 @@ class Scraper
       instance = Course.new
       instance.title = course.css("h2").text.strip
       instance.schedule = course.css(".date").text.strip
-      instance.description = course.css("p")
+      instance.description = course.css("p").text.strip
     end
 
   end
